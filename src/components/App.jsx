@@ -1,6 +1,6 @@
 // import Section from "components/Section"
-
-import FeedbackOptions from "components/FeedbackOptions/FeedbackOptions";
+import FeedbackOptions from "components/FeedbackOptions";
+import Statistics from "components/Statistics";
 import { Component } from "react";
 
 
@@ -22,12 +22,17 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;  
 
     return (
-      <>       
-          <FeedbackOptions
-            options={this.options}
-            onLeaveFeedback={this.onLeaveFeedback}
-          />     
-       
+      <>  
+           
+        <FeedbackOptions
+          options={this.options}
+          onLeaveFeedback={this.onLeaveFeedback}
+        />     
+        <Statistics
+          good={good}
+          neutral={neutral}
+          bad={bad}              
+        />
       </>
     );
   }
