@@ -1,7 +1,8 @@
-import Section from "components/Section"
+import Section from "components/Section";
 import FeedbackOptions from "components/FeedbackOptions";
 import Statistics from "components/Statistics";
 import Notification from 'components/Notification';
+import upperCase from 'utils/upperCase.js';
 import { Component } from "react";
 
 
@@ -12,7 +13,7 @@ export class App extends Component {
     bad: 0,
   };
 
-  options = Object.keys(this.state);
+  options = Object.keys(this.state).map(upperCase);
 
   onLeaveFeedback = feedback => {
     this.setState(prevState => ({ [feedback]: prevState[feedback] + 1 }));

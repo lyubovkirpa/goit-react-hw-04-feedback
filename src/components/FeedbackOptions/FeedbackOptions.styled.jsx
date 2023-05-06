@@ -1,5 +1,3 @@
-// import styled from '@emotion/styled';
-
 import styled from 'styled-components';
 
 export const List = styled.ul`
@@ -7,21 +5,26 @@ export const List = styled.ul`
   display: flex;
   gap: 15px;
   padding: 0;
-`;
-
-export const Item = styled.li`
-  font-size: 18px;
+  padding-bottom: 40px;
 `;
 
 export const Button = styled.button`
-  cursor: pointer;
+  font-size: 16px;
   font-weight: 500;
-  width: 152px;
-  height: 44px;
+  width: 136px;
+  height: 40px;
   color: black;
   background-color: white;
   border: 1px solid gray;
-  border-radius: 5px;
-
+  border-radius: 5px;  
+  &:hover,
+  &:focus {
+    border-color: blue;
+    color: blue;
+  }
+  &:active {
+    background-color: gainsboro;
+  }
+  cursor: pointer;
 `;
 
