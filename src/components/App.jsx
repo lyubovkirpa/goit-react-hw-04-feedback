@@ -3,7 +3,7 @@ import FeedbackOptions from "components/FeedbackOptions";
 import Statistics from "components/Statistics";
 import Notification from 'components/Notification';
 import upperCase from 'utils/upperCase.js';
-import { Component } from "react";
+import React, { Component } from "react";
 
 
 export class App extends Component {
