@@ -15,7 +15,7 @@ export const App = () => {
   const onLeaveFeedback = feedback => {
     switch (feedback) {
       case 'good':
-        setGood(prevGood => prevGood + 1);
+        setGood(prev => prev + 1);
         break;
       case 'neutral':
         setNeutral(prev => prev + 1);
